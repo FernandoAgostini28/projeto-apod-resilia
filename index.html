@@ -1,25 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./js/index.js" defer></script>
     <title>Apod</title>
 </head>
+
 <body>
-<header class="header-container">
-    <div>
-        Pesqui sua imagem pela data
-    </div>
-   <form action="" >
-       <input id='inputData' type="date">
-       <button id='btnData'>Eniar</button>
-   </form>
-</header>
-   <div>
-       <img id='imgData' src="" alt="">
-   </div>
+    <header class="header-container">
+        <div class='header-container'>
+            <div>
+                <img class='logo' src="./img/nasa1.png" alt="" srcset="" style="">
+            </div>
+            <div>
+                <h1 class='titulo-header'>Pesquise uma imagem pela data</h1>
+            </div>
+        </div>
+        <form action="">
+            <input class="input" id='inputData' type="date">
+            <button class="btn" id='btnData'>Eniar</button>
+        </form>
+    </header>
+    <main id='body' class="body-conatiner">
+        <section>
+            <img class='imgNasa' id='imgData' src="" alt="">
+        </section>
+        <section style="display: flex; flex-direction: column; flex-wrap: wrap;">
+            <div class="body-texto">
+                <p> Titulo: <span>Titulo</span></p>
+            </div>
+            <div class="body-texto">
+                <p> Explanation: <span>"As the Earth spins on its axis, the sky seems to rotate around us. This motion,
+                        called diurnal motion, produces the beautiful concentric trails traced by stars during time
+                        exposures. Partial-circle star trails are pictured above over Grants Pass, Oregon, USA last
+                        month. Near the middle of the circles is the North Celestial Pole (NCP), easily identified as
+                        the point in the sky at the center of all the star trail arcs. The star Polaris, commonly known
+                        as the North Star, made the very short bright circle near the NCP. About 12,000 years ago, the
+                        bright star Vega was the North Star, and in about 14,000 years, as the Earth's spin axis slowly
+                        continues to precess, Vega will become the North Star again.
+                        digg_url = 'http://apod.nasa.gov/apod/ap090909.html'; digg_skin = 'compact';"</span></p>
+            </div>
+            <div class="body-texto" style="display: flex; justify-content: space-between; align-items: center;">
+                <div class="body-texto">
+                    <p>Data: <span>28/08/2020</span></p>
+                </div>
+                <div class="body-texto">
+                    <p>Media Type: <span> image</span></p>
+                </div>
+                <div class="body-texto">
+                    <p>Service Version<span> V01 </span></p>
+                </div>
+            </div>
+            <div class="body-texto">
+                <p>URL: <span>https://apod.nasa.gov/apod/image/0909/butterfly_hst.jpg</span></p>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>
