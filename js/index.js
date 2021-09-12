@@ -5,11 +5,6 @@ const buscarData = document.getElementById('btnData').addEventListener("click", 
     buscaAPod.criaUrl();
 })
 
-
-
-
-
-
 const buscaAPod = {
     url: 'https://api.nasa.gov/planetary/apod?api_key',
     api_key: 'ePZCAgQtjcla5RY1zfF4j3gPSIRJkPATwBL7cyeL',
@@ -21,29 +16,33 @@ const buscaAPod = {
     },
 
     criaUrl: function () {
-        fotoDia(this.url, this.api_key, this.dataEscolhida)
+        retornaFotoApi.fotoDia(this.url, this.api_key, this.dataEscolhida)
         console.log(this.url, this.api_key, this.dataEscolhida)
     },
 }
 
+const retornaFotoApi = {
+    async fotoDia(url, api_key, dataEscolhida) {
+        try {
+            await $.ajax({
 
-async function fotoDia(url, api_key, dataEscolhida) {
-    try {
-        await $.ajax({
+                url: `${url}=${api_key}&date=${dataEscolhida}`,
+                success(resposta) {
+                    retornaFotoApi.retornaFoto(resposta)
+                    console.log(resposta)
+                }
+            })
+        } catch (error) {
+            
+        }
+    },
 
-            url: `${url}=${api_key}&date=${dataEscolhida}`,
-            success(resposta) {
-                retornaFoto(resposta)
-            }
-        })
-    } catch {
+    retornaFoto(data) {
+        const imgData = document.getElementById('imgData')
+        imgData.src = `${data.hdurl}`
+        imgData.alt = `imagem nasa${data.date}`
 
     }
+
 }
-
-function retornaFoto(data) {
-    console.log(data)
-}
-
-
 
