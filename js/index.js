@@ -41,7 +41,6 @@ const retornaFotoApi = {
         const imgData = document.getElementById('imgData')
         imgData.src = `${data.hdurl}`
         imgData.alt = `imagem nasa${data.date}`
-
     }
 
 }
