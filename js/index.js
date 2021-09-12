@@ -38,10 +38,17 @@ const retornaFotoApi = {
     },
 
     retornaFoto(data) {
-        document.getElementById('nasa').remove();
-        document.getElementById('bem-vindo').remove();
+        const nasa = document.getElementById('nasa')
+        if(nasa !== null){
+        nasa.remove();
+        }
+        const bemVindo = document.getElementById('bem-vindo')
+        if(bemVindo !== null){
+        bemVindo.remove()
+        }
 
         const body = document.getElementById('body')
+        body.innerHTML='';
         body.innerHTML +=`
         <section>
             <img class='imgNasa' id='imgData' src="" alt="">
@@ -69,8 +76,10 @@ const retornaFotoApi = {
             </div>
         </section>`
         const imgData = document.getElementById('imgData')
+        if(imgData !== null){
         imgData.src = `${data.hdurl}`
         imgData.alt = `imagem nasa${data.date}`
+        }
         
     }
 

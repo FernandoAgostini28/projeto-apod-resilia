@@ -8,7 +8,7 @@ body {
     display: flex;
     justify-content: space-between; 
     align-items: center;  
-    height: 70px;
+    height: 90px;
     padding: 0 20px;
     background-color: rgb(84, 146, 146);    
 }
@@ -16,10 +16,9 @@ body {
 .btn {
     display: inline-block;
     border: none;
-    background-color: white;
+    background-color: rgb(102, 214, 67);
     padding: 10px 20px;
-    border-radius: 0.25rem;
-    
+    border-radius: 0.25rem;    
 }
 
 .input {
@@ -52,7 +51,7 @@ body {
     
     
     width: 900px;
-    max-height: 550px;
+    max-height: 540px;
     border-radius: 0.25rem;
     
 }
@@ -61,7 +60,7 @@ body {
     align-items: center;
     border-radius: 0.25rem;
     width: 100%;
-    max-height: 550px;
+    max-height: 540px;
 }
 
 .body-texto {
@@ -79,14 +78,40 @@ body {
     font-size: 1rem;
 }
 
-.nasa{
+#nasa{
     margin: 20px auto;
-    width: 550px;
-    height: 500px;
+    max-width: 550px;
+    max-height: 500px;
 }
 
-.bem-vindo {
-    margin: 250px 30px;
+#bem-vindo {
+    margin: 150px 30px;
     font-size: 3rem;
     font-weight: 600;
+}
+
+@media (max-width: 700px)
+{
+    .body-conatiner {    
+        
+        margin: 20px auto;
+        max-width: 450px;
+        max-height: 500px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .titulo-header{
+        font-size: 0.9rem;
+        color: white;
+    
+    }
+    .input {
+       margin-top: 10px;
+       margin-bottom: 5px;
+    }
+    #bem-vindo {
+        margin: 50px auto;
+        font-size: 3rem;
+        font-weight: 600;
+    }
 }
