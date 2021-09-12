@@ -65,11 +65,28 @@ body {
 }
 
 .body-texto {
-    margin: 10px auto;
+    font-size: 0.8rem;
+    margin: 10px;
     padding: 10px;
     font-weight: 600;
 }
 
-.body-texto span {
+.body-texto span {    
     font-weight: 400;
+}
+
+.titulo-body{
+    font-size: 1rem;
+}
+
+.nasa{
+    margin: 20px auto;
+    width: 550px;
+    height: 500px;
+}
+
+.bem-vindo {
+    margin: 250px 30px;
+    font-size: 3rem;
+    font-weight: 600;
 }

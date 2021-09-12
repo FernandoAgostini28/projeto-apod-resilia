@@ -38,9 +38,40 @@ const retornaFotoApi = {
     },
 
     retornaFoto(data) {
+        document.getElementById('nasa').remove();
+        document.getElementById('bem-vindo').remove();
+
+        const body = document.getElementById('body')
+        body.innerHTML +=`
+        <section>
+            <img class='imgNasa' id='imgData' src="" alt="">
+        </section>
+        <section style="display: flex; flex-direction: column; flex-wrap: wrap;">
+            <div class="body-texto titulo-body">
+                <p > Titulo: <span >${data.title}</span></p>
+            </div>
+            <div class="body-texto">
+                <p> Explanation: <span>${data.explanation}</span></p>
+            </div>
+            <div  style="display: flex; justify-content: space-between; align-items: center;">
+                <div class="body-texto">
+                    <p>Data: <span>${data.date}</span></p>
+                </div>
+                <div class="body-texto">
+                    <p>Media Type: <span> ${data.media_type}</span></p>
+                </div>
+                <div class="body-texto">
+                    <p>Service Version<span> ${data.service_version} </span></p>
+                </div>
+            </div>
+            <div class="body-texto">
+                <p>URL: <span>${data.url}</span></p>
+            </div>
+        </section>`
         const imgData = document.getElementById('imgData')
         imgData.src = `${data.hdurl}`
         imgData.alt = `imagem nasa${data.date}`
+        
     }
 
 }
