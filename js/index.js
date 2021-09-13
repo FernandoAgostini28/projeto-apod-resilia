@@ -53,7 +53,7 @@ const retornaFotoApi = {
         <section>
             <img class='imgNasa' id='imgData' src="" alt="">
         </section>
-        <section style="display: flex; flex-direction: column; flex-wrap: wrap;">
+        <section class='info' style="display: flex; flex-direction: column; flex-wrap: wrap;">
             <div class="body-texto titulo-body">
                 <p > Titulo: <span >${data.title}</span></p>
             </div>
