@@ -20,7 +20,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 900px;
+    width: 900px;
     margin: 0 auto
 }
 
@@ -59,8 +59,7 @@ body {
 .body-conatiner {
     max-width: 900px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);    
-    
+    grid-template-columns: repeat(2, 1fr);     
     margin: 10px auto;
 }
 
@@ -96,8 +95,6 @@ body {
 }
 
 @media (max-width: 700px)
-
-
 {
 
     .header {
@@ -130,6 +127,7 @@ body {
     .input {
        margin-top: 10px;
        margin-bottom: 5px;
+       margin-right: 5px;
     }
     .body-texto {
         margin: 0px;
