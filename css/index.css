@@ -2,15 +2,33 @@ body {
     box-sizing: border-box;    
 }
 
-/* ===================== Hedaer =======================*/
-
-.header-container {
+.header {
     display: flex;
-    justify-content: space-between; 
-    align-items: center;  
-    height: 90px;
-    padding: 0 20px;
-    background-color: rgb(84, 146, 146);    
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: teal;
+}
+
+.logo {
+    width: 70px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.header-container{  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto
+}
+
+.header-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
 
 .btn {
@@ -36,33 +54,27 @@ body {
 
 }
 
-.logo {
-    width: 60px;
-    height: 50px;
-    margin-right: 20px;
-}
+/*================================================== Main====================*/
 
-/* ===================== Main =======================*/
-.body-conatiner {    
-    
-    margin: 20px auto;
+.body-conatiner {
+    max-width: 900px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);    
     
-    
-    width: 900px;
-    max-height: 540px;
-    border-radius: 0.25rem;
-    
+    margin: 10px auto;
 }
 
-.imgNasa {
-    align-items: center;
-    border-radius: 0.25rem;
-    width: 100%;
+.imgNasa {   
+    border-radius: 0.25rem;    
     max-height: 540px;
 }
 
+.info {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 .body-texto {
     font-size: 0.8rem;
     margin: 10px;
@@ -77,13 +89,6 @@ body {
 .titulo-body{
     font-size: 1rem;
 }
-
-#nasa{
-    margin: 20px auto;
-    max-width: 550px;
-    max-height: 500px;
-}
-
 #bem-vindo {
     margin: 150px 30px;
     font-size: 3rem;
@@ -91,14 +96,31 @@ body {
 }
 
 @media (max-width: 700px)
+
+
 {
-    .body-conatiner {    
+
+    .header {
         
-        margin: 20px auto;
-        max-width: 450px;
-        max-height: 500px;
-        display: grid;
+        height: 90px;
+        
+    }
+    .body-conatiner {     
+       
         grid-template-columns: repeat(1, 1fr);
+        justify-items:center;
+       
+    }
+
+    .imgNasa {  
+        
+        max-width: 350px;        
+        padding: 0 20px;
+    }
+
+    .info {  
+        max-width: 350px; 
+        padding:0 20px
     }
     .titulo-header{
         font-size: 0.9rem;
@@ -109,9 +131,11 @@ body {
        margin-top: 10px;
        margin-bottom: 5px;
     }
-    #bem-vindo {
-        margin: 50px auto;
-        font-size: 3rem;
-        font-weight: 600;
+    .body-texto {
+        margin: 0px;
     }
+    .info{
+        padding: 0;
+    }
+        
 }
